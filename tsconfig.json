@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -20,9 +21,14 @@
       }
     ],
     "paths": {
-      "@/*": ["./*"]
+      "@*": ["./*"],
+       "@providers": ["components/providers"],
+      "@providers/*": ["components/providers/*"],
+      "@hooks": ["components/hooks"],
+      "@hooks/*": ["components/hooks/*"],
+      
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/providers/Web3/index.tsx", "app/api/verify26/page.ts"],
   "exclude": ["node_modules"]
 }
